@@ -8,11 +8,12 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainProfile extends FragmentActivity implements FragmentA.FragmentAActions {
 
     private FragmentA fragmentA;
-    
+
     private FragmentB fragmentB;
     private FragmentC fragmentC;
 
@@ -51,8 +52,10 @@ public class MainProfile extends FragmentActivity implements FragmentA.FragmentA
             }
         });
     }
-    @Override
-    public void onMessage(String me) {
 
+    //5. Implementar metodos de la interfaz
+    @Override
+    public void onMessage(String msj) {
+        Toast.makeText(this, msj, Toast.LENGTH_LONG).show();
     }
 }

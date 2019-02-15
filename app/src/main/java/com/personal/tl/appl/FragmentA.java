@@ -35,7 +35,7 @@ public class FragmentA extends Fragment {
             public void onClick(View view) {
                 //4. Mandar info al otro lado
                 if(listener !=null){
-
+                    listener.onMessage("Hola desde el fragment A");
                 }
             }
         });
